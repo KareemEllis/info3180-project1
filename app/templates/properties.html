@@ -10,10 +10,14 @@
             <img src="https://static3.mansionglobal.com/production/media/listing_images/7caacb3dc8df3d2a28daa2e98c85c518/xlarge_2fd0eca03446d30908ce117d9e5fa2.jpg" alt="Picture of {{ property.title }}">
             <div class="property-info">
                 <h3>{{ property.title }}</h3>
-                <p>{{ property.location }}</p>
-                <h4>{{ property.price }}</h4>
+                <div class="price">
+                    <i class="material-icons">location_on</i>
+                    <p>{{ property.location }}</p>
+                </div>
+                
+                <h4 class="bg-info text-light">{{ property.price }}</h4>
             </div>
-            <a href="{{ url_for('property_view', propertyid=property.id) }}">View Property</a>
+            <a class="bg-primary" href="{{ url_for('property_view', propertyid=property.id) }}">View Property</a>
         </div>
     {% endfor %}
 </div>
