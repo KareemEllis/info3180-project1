@@ -5,14 +5,14 @@ class Property(db.Model):
     # the class name. In this case a class name of UserProfile would create a
     # user_profile (singular) table, but if we specify __tablename__ we can change it
     # to `user_profiles` (plural) or some other name.
-    __tablename__ = 'property'
+    __tablename__ = 'properties'
 
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(100))
-    description = db.Column(db.String(150))
-    num_rooms = db.Column(db.Integer)
-    num_bathrooms = db.Column(db.Integer)
-    price = db.Column(db.Float(precision=2))
+    description = db.Column(db.String(250))
+    num_rooms = db.Column(db.String(80))
+    num_bathrooms = db.Column(db.String(80))
+    price = db.Column(db.String(80))
     property_type = db.Column(db.String(80))
     location = db.Column(db.String(80))
     photo_filename = db.Column(db.String(255))
