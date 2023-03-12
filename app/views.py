@@ -8,6 +8,8 @@ This file contains the routes for your application.
 from app import app, db
 from flask import render_template, request, redirect, url_for
 from app.models import Property
+from app.forms import NewPropertyForm
+from werkzeug.utils import secure_filename
 
 
 ###
@@ -25,7 +27,16 @@ def about():
     """Render the website's about page."""
     return render_template('about.html', name="Mary Jane")
 
+@app.route('/properties/create')
+def new_property():
+    """Render the website's about page."""
+    form = NewPropertyForm()
+    return render_template('new_property.html', form=form)
 
+@app.route('/properties/')
+def properties():
+    """Render the website's about page."""
+    return render_template('properties.html')
 ###
 # The functions below should be applicable to all Flask apps.
 ###

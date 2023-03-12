@@ -1,3 +1,29 @@
 body {
     padding-top: 5rem;
+    background-color: rgb(238, 238, 238);
+}
+
+form{
+    background-color: white;
+    max-width: 900px;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px;
+}
+
+.form-label{
+    font-weight: bold;
+}
+
+.form-control{
+    margin-bottom: 15px;
+}
+
+.small-control{
+    max-width: 300px;
 }
