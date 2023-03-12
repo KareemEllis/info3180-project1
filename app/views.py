@@ -5,8 +5,9 @@ Werkzeug Documentation:  https://werkzeug.palletsprojects.com/
 This file contains the routes for your application.
 """
 
-from app import app
+from app import app, db
 from flask import render_template, request, redirect, url_for
+from app.models import Property
 
 
 ###
