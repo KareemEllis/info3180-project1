@@ -3,6 +3,10 @@ body {
     background-color: rgb(238, 238, 238);
 }
 
+nav{
+    background-color: rgb(108, 211, 163);
+}
+
 form{
     background-color: white;
     max-width: 900px;
@@ -26,4 +30,162 @@ section{
 
 .small-control{
     max-width: 300px;
+}
+
+.properties{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.property-card{
+    background-color: white;
+    box-shadow: 0 0 5px black;
+    overflow: hidden;
+    border-radius: 5px;
+    width: 400px;
+    height: 400px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.property-card img{
+    height: 230px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.property-card a{
+    background-color: rgb(0, 37, 116);
+    color: white;
+    display: block;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+.property-card a:hover{
+    background-color: rgb(0, 23, 71);
+}
+
+.property-card .property-info{
+    padding: 0 10px;
+}
+
+.property-card h3{
+    font-weight: bold;
+    font-size: 22px;
+    margin: 0;
+}
+.property-card p{
+    margin: 0;
+}
+.property-card h4{
+    margin: 0;
+    font-size: 15px;
+    background-color: rgb(13, 114, 172);
+    border-radius: 15px;
+    display: inline-block;
+    padding: 3px 10px;
+}
+
+
+
+
+.property{
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    max-width: 700px;
+    min-height: 300px;
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 5px black;
+}
+
+.property p{
+    margin: 0;
+}
+
+.property img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.property .property-details{
+    height: 100%;
+    padding: 20px;
+}
+
+.property h3{
+    font-weight: bold;
+    font-size: 22px;
+    margin: 0;
+}
+
+.property .tags{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.property .tags p{
+    margin: 8px 10px 0 0;
+    font-size: 13px;
+    border-radius: 15px;
+    display: inline-block;
+    padding: 3px 10px;
+    color: white;
+    font-weight: 600;
+}
+
+.property .tags .price{
+    background-color: rgb(13, 114, 172);
+}
+.property .tags .type{
+    background-color: rgb(172, 162, 13);
+}
+
+.property .description{
+    margin-bottom: 10px;
+}
+
+.property .rooms{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.property .rooms div{
+    margin-right: 15px;
+}
+
+.property .bedrooms{
+    display: flex;
+}
+.property .bathrooms{
+    display: flex;
+}
+.property .location{
+    display: flex;
+    margin-bottom: 15px;
+}
+i{
+    margin-right: 5px;
+}
+
+.property button{
+    border: 0;
+    background-color: blue;
+    box-shadow: 0 0 3px rgb(58, 58, 255);
+    color: white;
+    width: 120px;
+    height: 30px;
 }
