@@ -7,7 +7,7 @@
 <div class="properties">
     {% for property in properties %}
         <div class="property-card">
-            <img src="https://static3.mansionglobal.com/production/media/listing_images/7caacb3dc8df3d2a28daa2e98c85c518/xlarge_2fd0eca03446d30908ce117d9e5fa2.jpg" alt="Picture of {{ property.title }}">
+            <img src="{{ url_for('get_image', filename=property.photo_filename) }}" alt="Picture of {{ property.title }}">
             <div class="property-info">
                 <h3>{{ property.title }}</h3>
                 <div class="price">

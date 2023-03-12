@@ -6,7 +6,7 @@ This file contains the routes for your application.
 """
 import os
 from app import app, db
-from flask import render_template, request, redirect, url_for, flash
+from flask import render_template, request, redirect, url_for, flash, send_from_directory
 from app.models import Property
 from app.forms import NewPropertyForm
 from werkzeug.utils import secure_filename
@@ -73,6 +73,13 @@ def property_view(propertyid):
     """Render the website's about page."""
     property = Property.query.filter_by(id=propertyid).first()
     return render_template('view_property.html', property=property)
+
+
+@app.route("/uploads/<filename>")
+def get_image(filename):
+    root_dir = os.getcwd()
+
+    return send_from_directory(os.path.join(root_dir, app.config['UPLOAD_FOLDER']), filename)
 ###
 # The functions below should be applicable to all Flask apps.
 ###
