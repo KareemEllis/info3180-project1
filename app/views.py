@@ -63,7 +63,11 @@ def new_property():
 @app.route('/properties/')
 def properties():
     """Render the website's about page."""
-    return render_template('properties.html')
+    properties = Property.query.all()
+    rootdir = os.getcwd()
+    for property in properties:
+        property.photo_filename = rootdir + '/uploads/' + property.photo_filename
+    return render_template('properties.html', properties=properties)
 ###
 # The functions below should be applicable to all Flask apps.
 ###

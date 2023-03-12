@@ -1,5 +1,20 @@
 {% extends "base.html" %}
 
 {% block main %}
+{% include 'flash_messages.html' %}
 <h1 class="display-5 fw-bold">Properties</h1>
+
+<div class="properties">
+    {% for property in properties %}
+        <div class="card">
+            <img src="{{ property.photo_filename }}" alt="Picture of {{ property.title }}">
+            <div class="property-info">
+                <h3>{{ property.title }}</h3>
+                <p>{{ property.location }}</p>
+                <h4>{{ property.price }}</h4>
+            </div>
+            <a href="#">View Property</a>
+        </div>
+    {% endfor %}
+</div>
 {% endblock %}
